@@ -1,0 +1,74 @@
+.fancy-header {
+    color: limegreen; /* single line comment */
+    text-decoration: underline;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 30px;
+}
+
+#container {
+    text-align: center;
+    background-color: mintcream;
+    background-image: url("/codeup-web-exercises/img/veridian-header-background.jpg");
+}
+
+#container p{
+    color: whitesmoke;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h1, h2 {
+    color: #0fb784;
+    text-decoration: underline;
+    text-shadow: 2px -2 black, 1 1px black, 1px -1 black, 1 -1px black;
+}
+
+#page {
+    background-color: rgba(210,250,248,0.33);
+}
+
+ul{
+    list-style: square;
+}
+
+.page{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#pricing-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+/* unvisited link (:link) */
+a:link {
+    color:blue;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:purple;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:black;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}
+
+
