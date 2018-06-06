@@ -1,0 +1,50 @@
+
+
+
+ * {
+    box-sizing: border-box;
+
+ }
+
+ .styles-grid{
+     background-color: darkgray;
+     border: 1px solid black;
+ }
+
+
+.container {
+    width:85%;
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 1200px;
+}
+
+.row{
+    width: 100%;
+}
+
+.column{
+    float: left;
+}
+
+.one-third {
+    width: 33.33%;
+}
+
+.one-half {
+    width: 50%;
+}
+
+.one-eighth {
+    width: 12.5%;
+}
+
+.one-fourth {
+    width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+    .one-third, .one-half {
+        width: 100%;
+    }
+}
