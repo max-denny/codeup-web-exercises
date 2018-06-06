@@ -7,8 +7,10 @@
  }
 
  .styles-grid{
-     background-color: darkgray;
+     background-color: lightgray;
      border: 1px solid black;
+     padding: 10px;
+     margin-bottom: 8px;
  }
 
 
@@ -37,6 +39,7 @@
 
 .one-eighth {
     width: 12.5%;
+    margin-bottom: 25px;
 }
 
 .one-fourth {
