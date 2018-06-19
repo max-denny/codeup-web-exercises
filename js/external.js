@@ -8,9 +8,9 @@ alert ('Hey, no way! ' + userInput.toUpperCase() + ' is my favorite color, too!'
 
 alert ('So let\'s talk about these movies you rented for the kids. What do you say?');
 var dailyMovieCost = confirm('Together, let\'s figure out how much money you spent. I know that that each movie costs three dollars per day to rent. Is that right?');
-    console.log(confirm);
+    console.log(dailyMovieCost);
 
-if (dailyMovieCost = false) {
+if (dailyMovieCost == false) {
     alert('Hey, you can\'t fool me! I know those movies costs $3 a day.');
 }
 

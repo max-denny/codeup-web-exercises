@@ -12,8 +12,8 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(name) {
-    return 'Hello, ' + name;
+function sayHello(name){
+  return 'Hello, ' + name;
 }
 
 
@@ -44,6 +44,7 @@ sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
+
 var random = Math.floor((Math.random() * 3) + 1);
 
 /**
@@ -72,11 +73,9 @@ function isTwo(number) {
 
 var resultIsTwo = isTwo;
 
-console.log('Two is still equal to two, right? That is ' + isTwo(2));
-
-console.log('This is our random number: ' + random);
-
-console.log('Our random number is equal to two. This is: ' + isTwo(random));
+  console.log('Two is still equal to two, right? That is ' + isTwo(2));
+  console.log('This is our random number: ' + random);
+  console.log('Our random number is equal to two. This is: ' + isTwo(random));
 
 
 /**
@@ -96,8 +95,7 @@ function calculateTip(percentTip, totalBill) {
    return (percentTip * totalBill);
 }
 
-
-var tipInValue = tipPercentage / 100;
+//var tipInValue = tipPercentage / 100;
 var totalTip = calculateTip;
 
 //calculateTip(0.20, 100);
@@ -112,10 +110,8 @@ var totalTip = calculateTip;
  */
 
 alert('Glad you enjoyed your meal but now it\'s time to pay the bill. First, let\'s tip your server');
-
-var totalTicket = prompt('What was the total of your ticket?');
-
-var percentTip = prompt('Good deal. Now how much would like to tip percentage wise?');
+  var totalTicket = prompt('What was the total of your ticket?');
+  var percentTip = prompt('Good deal. Now how much would like to tip percentage wise?');
 
 console.log('The amount you should tip is: ' + calculateTip(percentTip, totalTicket));
 
@@ -137,16 +133,12 @@ console.log('The amount you should tip is: ' + calculateTip(percentTip, totalTic
 
 alert('Let\'s get you a discount.');
 
-var totalPrice = prompt('What was your total price?');
+  var totalPrice = prompt('What was your total price?');
 var percentDiscount = prompt('What was your discount rate?');
 
 function applyDiscount(totalPrice, percentDiscount){
     return (totalPrice - (percentDiscount * totalPrice));
 }
-
-
-
-
 
 console.log('Your price with the discount is $ ' + applyDiscount(totalPrice, percentDiscount));
 
