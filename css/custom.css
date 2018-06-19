@@ -1,11 +1,14 @@
 
-
-.jumbotron .jumbotron-fluid {
-    background-image: url("/img/pizza.png");
-    width: 100%
+.jumbotron {
+    background-image:url("../img/pizza-party.png");
+    background-size:cover;
 
 }
 
 h1 {
-    background-color: #3B94D9;
+    background-color:floralwhite;
+    text-align: center;
+    opacity: 0.8;
 }
+
+

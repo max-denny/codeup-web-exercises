@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions JS</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    var firstName = prompt('What is your first name?');
+    var age = prompt('How old are you ' + firstName + '?');
+
+
+    function makeUserName(firstName, age) {
+        var firstLetter =  firstName.substring(0,1);
+        var firstLower = firstLetter.toLowerCase();
+        var nameLength = firstName.length;
+        return nameLength + firstLower + age;
+
+    }
+
+    var userName = makeUserName(firstName, age);
+
+    alert('Your username is ' + userName);
+
+</script>
+</body>
+</html>

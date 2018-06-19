@@ -1,0 +1,16 @@
+
+
+img {
+    width: 100%;
+}
+.alert-info a {
+    background-color: rgb(204 255 254);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    border: 2px solid rgb(193 193 193);
+}
+
+/*desktop view */

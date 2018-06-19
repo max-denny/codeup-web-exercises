@@ -27,17 +27,15 @@ li {
 
 .alert-info {
     background-color: lightblue;
-    align: center;
+    display: block;
     text-align: center;
     height: 30px;
     vertical-align: center;
     /* vertical-align: middle; */
     /* vertical-align: 10px; */
-    vertical-align: 40px;
-    padding-bottom: -10px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding:15px;
     font-family: Tahoma, Geneva, sans-serif;
+    border: 2px solid rgb(193 193 193);
 }
 
 
