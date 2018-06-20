@@ -19,17 +19,12 @@ Math.floor(Math.random() * 5) + 1;
 function oddOrEven() {
     var ranResult = Math.floor(Math.random() * 180) + 20;
     if (ranResult % 2 === 0) {
-        return (console.log(ranResult + " is " + " even."));
+        return (console.log(ranResult + " is even."));
     } else {
-        return (console.log(ranResult + " is " + " odd."))
+        return (console.log(ranResult + " is  odd."))
     }
 }
 
-for (var i=0;i<10; i++){
+for (var i=0;i<10; i++) {
     oddOrEven();
 }
-
-
-for (var concatNumber;
-}
-
