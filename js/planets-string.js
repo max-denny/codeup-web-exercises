@@ -32,8 +32,26 @@
     var breakString = planetsArray.join('<br>');
     console.log(breakString);
 
-    var listString = planetsArray.join('<ul>' + '</ul>');
+    var listString = planetsArray.join('<li>');
     console.log(listString);
+
+    var planetsHTML = "<ul><li>";
+    planetsHTML += planetsArray.join("</li><li>");
+    planetsHTML += "</li></ul>";
+
+    console.log(planetsHTML);
+
+    document.body.innerHTML = planetsHTML;
+
+
+    //loop
+
+    var planetsHTML = "<ul>";
+    planetsArray.forEach(function(planet) {
+        planetsHTML += "<li>" + planet + "</li>li>";
+    });
+
+    planetsHTML += "</ul>";
 
 
 
