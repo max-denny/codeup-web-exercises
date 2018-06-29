@@ -23,18 +23,76 @@ function initMap() {
 
     var mapCanvas = document.getElementById('map-canvas');
     var mapOptions =  {
-      zoom: 10,
+      zoom: 25,
       center: {
           lat:29.426791,
           lng: -98.48
       }
     };
     var map = new google.maps.Map (mapCanvas, mapOptions);
+
+    // geocoding
+    //create a geocode object
+
+    var geo = new google.maps.Geocoder();
+
+    geo.geocode({address: "1 UTSA Circle"}, function(response, status) {
+
+        if (status === "OK") {
+
+            map.setCenter(response[0].geometry.location);
+
+        } else {
+            console.log("GEOCODE Fail!");
+        }
+
+        //map.setCenter()
+
+        console.log(status);
+        console.log(response[0].geometry.location.lat());
+        console.log(response[0].geometry.location.lng());
+    });
+
+//reverse Geocode
+
+    geo.geocode({location: { lat:29.5845094 , lng: -98.6171992999998 }} function(response, status){
+
+        if (status === "OK") {
+
+        }
+    }
+
 }
+
+var marker = new google.maps.Marker({
+    position: {
+        lat: 29.426791,
+        ln: -98.48602
+    },
+    map:map
+
+});
+
+// info window
+
+    var infowindow = new google.maps.InfoWindow({
+        content: "This is Codeup:"
+});
+
+
+  infowindow.open(map, marker);
+
+
+  //events
+
+    map.addListener("dragend", function() {
+        infoWindow.open(map,marker)
+    });
+
 
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxIPbNd4ljI6NdSyP5ugk4XoKDzw2VEZM&callback=initMap"
                         async defer>
 
 
