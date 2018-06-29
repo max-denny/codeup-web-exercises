@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Map API</title>
+
+
+
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="map-canvas"></div>
+
+
+
+
+<button id="btn1">Zoom(x5)</button>
+<button id="btn2">Zoom(x10)</button>
+<button id="btn3">Zoom(x15)</button>
+
+
+<script>
+
+    function initMap(zLevel) {
+        zLevel = (zLevel === undefined) ? 5 : zLevel;
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+            zoom: zLevel,
+            center: {
+                lat: 32.450016,
+                lng: -93.745599
+            }
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var geo = new google.maps.Geocoder();
+        geo.geocode({address: 'Superior Bar & Grill'}, function (response, status) {
+            if (status === 'OK') {
+                map.setCenter(response[0].geometry.location);
+                console.log(response[0].geometry.location.lat());
+                console.log(response[0].geometry.location.lng());
+            } else {
+                alert('Invalid address!');
+            }
+        });
+
+        var marker = new google.maps.Marker({
+            position: {
+                lat: 32.450016,
+                lng: -93.745599
+            },
+            map: map
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+            content: '<h3>Superior Grill!</h3>'
+        });
+        infowindow.open(map, marker);
+
+        map.addListener('dragend', function() {
+            infowindow.open();
+        });
+    }
+
+    var listener = function () {
+        console.log('You zoomed (x5).');
+        initMap(5);
+    };
+    document.getElementById('btn1').addEventListener('click', listener, false);
+
+
+
+
+    var listener2 = function () {
+        console.log('You zoomed (x10).');
+        initMap(10);
+    };
+    document.getElementById('btn2').addEventListener('click', listener2, false);
+
+
+
+
+    var listener3 = function () {
+        console.log('You zoomed (x15).');
+        initMap(15);
+    };
+    document.getElementById('btn3').addEventListener('click', listener3, false);
+
+
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxIPbNd4ljI6NdSyP5ugk4XoKDzw2VEZM&callback=initMap"
+        async defer></script>
+
+</body>
+</html>
