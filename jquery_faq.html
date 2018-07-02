@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+
+        .invisible{
+            display: none;
+        }
+
+        .highlighted{
+            background: darkolivegreen;
+        }
+
+    </style>
+    <title>JQuery FAQ</title>
+</head>
+
+<h1>National Park Questions</h1>
+
+<a href="#" id="stealth-mode">Reveal Mode</a>
+
+<div class = "data">
+<dl>
+    <dt><h3>Where is Borjomi National Park ?</h3></dt>
+    <dd class = 'invisible'><h4>Georgia</h4></dd>
+
+    <dt><h3>Where is Brecon Beacons National Park?</h3></dt>
+    <dd class = 'invisible'><h4>Wales</h4></dd>
+
+    <dt><h3>Where is Big Bend National Park?</h3></dt>
+    <dd class = 'invisible'><h4>Texas</h4></dd>
+
+    <dt><h3>Where is Bryce Canyon?</h3></dt>
+    <dd class = 'invisible'><h4>Utah</h4></dd>
+
+    <dt><h3>Where is Channel Islands National Park?</h3></dt>
+    <dd class = 'invisible'><h4>California</h4></dd>
+
+    <dt><h3>Where is Denali National Park</h3></dt>
+    <dd class = 'invisible'><h4>Alaska</h4></dd>
+
+    <dt><h3>Where is Grand Teton National Park?</h3></dt>
+    <dd class = 'invisible'><h4>Wyoming</h4></dd>
+
+    <dt><h3>Where is Joshua Tree National Park?</h3></dt>
+    <dd class = 'invisible'><h4>California</h4></dd>
+
+    <dt><h3>Where is Shenandoah National Park?</h3></dt>
+    <dd class = 'invisible'><h4>Virginia</h4></dd>
+
+    <dt><h3>Where is Zion National Park?</h3></dt>
+    <dd class = 'invisible'><h4>Utah</h4></dd>
+
+
+
+</dl>
+
+</div>
+
+
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+    "use strict";
+
+    $('#stealth-mode').click(function(event) {
+        event.preventDefault();
+        $('dd').toggleClass('invisible');
+    });
+
+    $("dt").click(function(){
+        $(this).toggleClass("highlighted");
+
+    });
+
+    $("dt").each(function() {
+        console.log($(this).text());
+    })
+
+
+    /* $(document).ready(function() {
+        $('#highlight-important').click(function(event) {
+            event.preventDefault();
+            $('.important').toggleClass('highlighted');
+        });
+    });*/
+
+</script>
+
+
+
+</body>
+</html>
