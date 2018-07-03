@@ -16,11 +16,28 @@
             background: darkolivegreen;
         }
 
+        .picture-frame{
+            background: saddlebrown;
+            height: 150 px;
+            width: 100 px;
+        }
+
     </style>
     <title>JQuery FAQ</title>
 </head>
 
-<h1>National Park Questions</h1>
+<h1>National Parks</h1>
+
+<div class="jq-effects-div">
+
+    <h1>Would you like to sign up for our newsletter?</h1>
+
+    <span id = "hide-div-button">XXX</span>
+</div>
+
+
+
+
 
 <a href="#" id="stealth-mode">Reveal Mode</a>
 
@@ -63,11 +80,90 @@
 </div>
 
 
+<button id="highlighter">Highlight Last List Element</button>
+
+<h3>Joshua Tree National Park</h3>
+<ul id="national-parks">
+    <li class="first-item">Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li class="last">Everglades</li>
+</ul>
+
+<h3>Big Bend National Park</h3>
+<ul id="state-parks-texas">
+    <li class="first-item">Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li class="last">Enchanted Rock</li>
+</ul>
+
+<h3>Grand Teton National Park</h3>
+<ul id="national-parks">
+    <li class="first-item">Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li class="last">Everglades</li>
+</ul>
+
+<h3>Acadia National Park</h3>
+<ul id="national-parks">
+    <li class="first-item">Features the tallest mountain on the Atlantic seaboard</li>
+    <li>Oldest National Park in the US east of the Mississippi</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li class="last">Everglades</li>
+</ul>
+
+
+<div class="picture-one picture-frame">
+
+    <img src="img/11.jpg" alt="HTML5 Icon" style="width:128px;height:156px;">
+
+    <button>Button 1</button>
+
+
+</div>
+
+<div class ="picture-two picture-frame">
+
+    <img src="img/18.jpg" alt="HTML5 Icon" style="width:128px;height:156px;">
+
+    <button>Button 2</button>
+
+
+</div>
+
+<div class ="picture-three picture-frame">
+
+    <img src="img/permaculture.jpg" alt="HTML5 Icon" style="width:128px;height:156px;">
+
+    <button>Button 3</button>
+
+</div>
+
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
 
     "use strict";
+
+    $("ul").hide();
+
+    $('h3').click(function showLists() {
+        $('ul').each(function (index) {
+            $('li').parent().show();
+
+        )};
+    )};
+
+    $("li").click(function(){
+        $('.first-item').css('color', 'blue');
+    });
+
 
     $('#stealth-mode').click(function(event) {
         event.preventDefault();
@@ -79,9 +175,34 @@
 
     });
 
+
+    $('#hide-div-button').click(function(){
+        $('.jq-effects-div').hide();
+
+    });
+
     $("dt").each(function() {
         console.log($(this).text());
     })
+
+    $("#highlighter").click(function(){
+        $('.last').css('background-color', '#FF0');
+
+    });
+
+
+
+   $("li").click(function(){
+        $('.first-item').css('color', 'blue');
+    });
+
+
+   /* $('li').each(function(index) {
+        if (index === 1) {
+            $(this).css('color', 'blue');
+        }
+    });
+*/
 
 
     /* $(document).ready(function() {
@@ -90,6 +211,14 @@
             $('.important').toggleClass('highlighted');
         });
     });*/
+
+    $('ul').each(function(index, element) {
+        $(element).children().last().css('background', 'yellow');
+    });
+
+    $('h3').click(function(){
+        $(this).next().children().css('font-weight', 'bold')
+    });
 
 </script>
 
