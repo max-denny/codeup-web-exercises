@@ -23,7 +23,7 @@
         var postsDiv = $('#posts');
 
         function getPosts(){
-            $.get('data/blog.json', function(posts){
+            $.get('./data/blog.json', function(posts){
                 posts.forEach(function(post){
                     addPosts(post);
                 });

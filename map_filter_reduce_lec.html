@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+<script>
+    "use strict";
+
+
+    //JAVASCRIPT//
+
+    /*var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    var evens = [];
+
+    for (var i = 0; i < numbers.length; i += 1) {
+        if (numbers[i] % 2 === 0) {
+          evens.push(numbers[i]);
+
+        };
+
+    }
+    console.log(evens);
+*/
+
+    //   ES6 //
+
+
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    let evens = numbers.filter( n => n % 2 === 0 );
+
+    console.log("evens" , evens);
+
+
+    // Syntax Bridging Old and New//
+
+    //evens = numbers.filter( (n) => {
+    //    return n % 2 === 0;
+
+    //});
+
+    let incremented = evens.map( n => n+4 );
+        console.log(incremented);
+
+
+    let sum = incremented.reduce( (accumulation, curNum) => accumulation+curNum, 0);
+
+    console.log('num', sum);
+
+d
+
+
+</script>
+
+
+
+
+</body>
+</html>

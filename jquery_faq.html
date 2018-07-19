@@ -82,7 +82,7 @@
 
 <button id="highlighter">Highlight Last List Element</button>
 
-<h3>Joshua Tree National Park</h3>
+<h3 class="park-heading">Joshua Tree National Park</h3>
 <ul id="national-parks">
     <li class="first-item">Arches</li>
     <li>Badlands</li>
@@ -153,12 +153,32 @@
 
     $("ul").hide();
 
-    $('h3').click(function showLists() {
+   /* function showLists() {
         $('ul').each(function (index) {
-            $('li').parent().show();
+            $($('ul')[index]).children().show();
+        });
+    }
+    */
 
-        )};
-    )};
+
+ /*  $('h3').click(function(){
+       $('ul').show();
+
+   });
+*/
+
+ var h3s = $('.parks');
+
+ h3s.each(function(ul){
+     ul.hide();
+ });
+
+ h3s.children();
+
+ $('.parks').click(function(){
+
+
+ });
 
     $("li").click(function(){
         $('.first-item').css('color', 'blue');
